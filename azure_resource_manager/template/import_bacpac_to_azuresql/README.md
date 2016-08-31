@@ -14,6 +14,8 @@ On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Az
 
 1, 2번 단계가 완료되었다면, 이제는 Azure resource template를 작성합니다.
 
+**해당 리소스 템플릿을 Visual Studio를 이용하여 배포하는 방법에 대해서는 [여기](https://github.com/jiyongseong/AzureIaaSHol/tree/master/2-iis-vms-sql-vm-template)를 참고하시기 바랍니다.**
+
 먼저 템플릿에서 사용할 매개 변수 파일은 다음과 같습니다.
 
 ### azuredeploy.parameters.json
@@ -229,7 +231,6 @@ On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Az
 * AdventureWorksStorageKey : 앞서 선택한 두 번째 키의 값을 입력합니다.
 * AdventureWorksStorageUri : bacpac 파일의 전체 URI 경로를 입력합니다.
 
-해당 리소스 템플릿을 Visual Studio를 이용하여 배포하는 방법에 대해서는 [여기](https://github.com/jiyongseong/AzureIaaSHol/tree/master/2-iis-vms-sql-vm-template)를 참고하시기 바랍니다.
 
  **첨언**
  Azure resource template에 대해서 잘 아시고, bacpac을 import하는 부분에만 관심이 있으시다면, 상기의 azuredeploy.json 파일에서 SQL Database 리소스의 다음 부분을 참고하시기 바랍니다.
