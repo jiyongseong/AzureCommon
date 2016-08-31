@@ -9,4 +9,8 @@ Micorsoft Azure IaaS(Infrastructure as a Services)/PaaS(Platform as a Services) 
 
 - Azure Resource template + bacpac을 이용하여, on-premises의 SQL Server 데이터베이스를 Azure SQL Databases로 이전하기.
 
+### [Azure 운영 로그 내려 받기 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/powershell/azure-operation-log) 
+- Azure PowerShell을 이용하여 Azure의 운영로그를 csv 파일로 내려 받기
+
+
 **성지용([jiyongseong](https://github.com/jiyongseong))**
