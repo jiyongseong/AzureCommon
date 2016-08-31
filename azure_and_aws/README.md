@@ -1,4 +1,4 @@
-# Microsoft Azure vs. AWS users
+# Microsoft Azure vs. AWS
 
 [Microsoft Azure and Amazon Web Services](https://azure.microsoft.com/en-us/campaigns/azure-vs-aws/mapping/)
 
