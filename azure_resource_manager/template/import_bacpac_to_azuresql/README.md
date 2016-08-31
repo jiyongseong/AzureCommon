@@ -1,5 +1,9 @@
 # SQL Server 데이터베이스를 Azure SQL Database로 배포하기(Azure resource template + bacpac)
 
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjiyongseong%2FAzureCommon%2Fmaster%2Fazure_resource_manager%2Ftemplate%2Fimport_bacpac_to_azuresql%2FTemplates%2Fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+
 On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Azure SQL Database로 배포하는 경우가 종종 있습니다.
 
 데이터베이스 이전은 다양한 방법으로 가능합니다만, 이번에는 Azure의 Resource template과 bacpac 파일을 이용하여 Azure SQL Databases에 데이터베이스를 이전하는 방법을 템플릿으로 공유합니다.
@@ -16,9 +20,6 @@ On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Az
 
 **해당 리소스 템플릿을 Visual Studio를 이용하여 배포하는 방법에 대해서는 [여기](https://github.com/jiyongseong/AzureIaaSHol/tree/master/2-iis-vms-sql-vm-template)를 참고하시기 바랍니다.**
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjiyongseong%2FAzureCommon%2Fmaster%2Fazure_resource_manager%2Ftemplate%2Fimport_bacpac_to_azuresql%2FTemplates%2Fazuredeploy.json" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>
 
 먼저 템플릿에서 사용할 매개 변수 파일은 다음과 같습니다.
 
