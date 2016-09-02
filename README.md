@@ -12,5 +12,7 @@ Micorsoft Azure IaaS(Infrastructure as a Services)/PaaS(Platform as a Services) 
 ### [Azure 운영 로그 내려 받기 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/powershell/azure-operation-log) 
 - Azure PowerShell을 이용하여 Azure의 운영로그를 csv 파일로 내려 받기
 
+### [Azure 배포 로그 확인 받기 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/powershell/azure-deployment-log) 
+- Azure PowerShell을 이용하여 Azure의 배포 로그 확인 하기
 
 **성지용([jiyongseong](https://github.com/jiyongseong))**

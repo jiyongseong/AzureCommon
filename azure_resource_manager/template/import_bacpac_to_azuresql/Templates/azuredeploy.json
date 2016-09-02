@@ -13,6 +13,10 @@
       "type": "string",
       "minLength": 1
     },
+    "azuresqldbserverName": {
+      "type": "string",
+      "minLength": 1
+    },
     "SQLDatabaseCollation": {
       "type": "string",
       "minLength": 1,
@@ -48,14 +52,13 @@
     }
   },
   "variables": {
-    "azuresqldbserverName": "your database server name",
     "AdventureWorksStorageKeyType": "Secondary",
     "AdventureWorksStorageKey": "your storage account key",
     "AdventureWorksStorageUri": "https://<<your storage account>>.blob.core.windows.net/bacpackincloud/AdventureWorks.bacpac"
   },
   "resources": [
     {
-      "name": "[variables('azuresqldbserverName')]",
+      "name": "[parameters('azuresqldbserverName')]",
       "type": "Microsoft.Sql/servers",
       "location": "[resourceGroup().location]",
       "apiVersion": "2014-04-01-preview",
@@ -75,7 +78,7 @@
           "location": "[resourceGroup().location]",
           "apiVersion": "2014-04-01-preview",
           "dependsOn": [
-            "[concat('Microsoft.Sql/servers/', variables('azuresqldbserverName'))]"
+            "[concat('Microsoft.Sql/servers/', parameters('azuresqldbserverName'))]"
           ],
           "properties": {
             "startIpAddress": "0.0.0.0",
@@ -88,7 +91,7 @@
           "location": "[resourceGroup().location]",
           "apiVersion": "2014-04-01-preview",
           "dependsOn": [
-            "[variables('azuresqldbserverName')]"
+            "[parameters('azuresqldbserverName')]"
           ],
           "tags": {
             "displayName": "SQLDatabase"
