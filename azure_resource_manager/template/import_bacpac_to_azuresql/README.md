@@ -28,17 +28,20 @@ On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Az
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "azuresqldbserverAdminLogin": {
-            "value": "sql server admin login name"
-        },
-        "azuresqldbserverAdminLoginPassword": {
-            "value": "sql server admin login"
-        },
-        "SQLDatabaseName": {
-            "value": "AdventureWorks"
-        }
+  "parameters": {
+    "azuresqldbserverAdminLogin": {
+      "value": "sql server admin login name"
+    },
+    "azuresqldbserverAdminLoginPassword": {
+      "value": "sql server admin login"
+    },
+    "SQLDatabaseName": {
+      "value": "AdventureWorks"
+    },
+    "azuresqldbserverName": {
+      "value": "your azure sql database server name"
     }
+  }
 }
 ```
 
@@ -65,6 +68,10 @@ On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Az
       "type": "securestring"
     },
     "SQLDatabaseName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "azuresqldbserverName": {
       "type": "string",
       "minLength": 1
     },
@@ -103,84 +110,83 @@ On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Az
     }
   },
   "variables": {
-    "azuresqldbserverName": "your database server name",
     "AdventureWorksStorageKeyType": "Secondary",
     "AdventureWorksStorageKey": "your storage account key",
     "AdventureWorksStorageUri": "https://<<your storage account>>.blob.core.windows.net/bacpackincloud/AdventureWorks.bacpac"
   },
-    "resources": [
+  "resources": [
+    {
+      "name": "[parameters('azuresqldbserverName')]",
+      "type": "Microsoft.Sql/servers",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2014-04-01-preview",
+      "dependsOn": [ ],
+      "tags": {
+        "displayName": "Azure SQL Database Server"
+      },
+      "properties": {
+        "administratorLogin": "[parameters('azuresqldbserverAdminLogin')]",
+        "administratorLoginPassword": "[parameters('azuresqldbserverAdminLoginPassword')]",
+        "version": "12.0"
+      },
+      "resources": [
         {
-            "name": "[variables('azuresqldbserverName')]",
-            "type": "Microsoft.Sql/servers",
-            "location": "[resourceGroup().location]",
-            "apiVersion": "2014-04-01-preview",
-            "dependsOn": [ ],
-            "tags": {
-                "displayName": "Azure SQL Database Server"
-            },
+          "name": "AllowAllWindowsAzureIps",
+          "type": "firewallrules",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2014-04-01-preview",
+          "dependsOn": [
+            "[concat('Microsoft.Sql/servers/', parameters('azuresqldbserverName'))]"
+          ],
           "properties": {
-            "administratorLogin": "[parameters('azuresqldbserverAdminLogin')]",
-            "administratorLoginPassword": "[parameters('azuresqldbserverAdminLoginPassword')]",
-            "version": "12.0"
+            "startIpAddress": "0.0.0.0",
+            "endIpAddress": "0.0.0.0"
+          }
+        },
+        {
+          "name": "[parameters('SQLDatabaseName')]",
+          "type": "databases",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2014-04-01-preview",
+          "dependsOn": [
+            "[parameters('azuresqldbserverName')]"
+          ],
+          "tags": {
+            "displayName": "SQLDatabase"
           },
-            "resources": [
-                {
-                    "name": "AllowAllWindowsAzureIps",
-                    "type": "firewallrules",
-                    "location": "[resourceGroup().location]",
-                    "apiVersion": "2014-04-01-preview",
-                    "dependsOn": [
-                        "[concat('Microsoft.Sql/servers/', variables('azuresqldbserverName'))]"
-                    ],
-                    "properties": {
-                        "startIpAddress": "0.0.0.0",
-                        "endIpAddress": "0.0.0.0"
-                    }
-                },
-              {
-                "name": "[parameters('SQLDatabaseName')]",
-                "type": "databases",
-                "location": "[resourceGroup().location]",
-                "apiVersion": "2014-04-01-preview",
-                "dependsOn": [
-                  "[variables('azuresqldbserverName')]"
-                ],
-                "tags": {
-                  "displayName": "SQLDatabase"
-                },
-                "properties": {
-                  "collation": "[parameters('SQLDatabaseCollation')]",
-                  "edition": "[parameters('SQLDatabaseEdition')]",
-                  "maxSizeBytes": "1073741824",
-                  "requestedServiceObjectiveName": "[parameters('SQLDatabaseRequestedServiceObjectiveName')]"
-                },
-                "resources": [
-                  {
-                    "name": "Import",
-                    "type": "extensions",
-                    "apiVersion": "2014-04-01-preview",
-                    "dependsOn": [
-                      "[parameters('SQLDatabaseName')]"
-                    ],
-                    "tags": {
-                      "displayName": "AdventureWorks"
-                    },
-                    "properties": {
-                      "storageKeyType": "[variables('AdventureWorksStorageKeyType')]",
-                      "storageKey": "[variables('AdventureWorksStorageKey')]",
-                      "storageUri": "[variables('AdventureWorksStorageUri')]",
-                      "administratorLogin": "[parameters('azuresqldbserverAdminLogin')]",
-                      "administratorLoginPassword": "[parameters('azuresqldbserverAdminLoginPassword')]",
-                      "operationMode": "Import"
-                    }
-                  }
-                ]
+          "properties": {
+            "collation": "[parameters('SQLDatabaseCollation')]",
+            "edition": "[parameters('SQLDatabaseEdition')]",
+            "maxSizeBytes": "1073741824",
+            "requestedServiceObjectiveName": "[parameters('SQLDatabaseRequestedServiceObjectiveName')]"
+          },
+          "resources": [
+            {
+              "name": "Import",
+              "type": "extensions",
+              "apiVersion": "2014-04-01-preview",
+              "dependsOn": [
+                "[parameters('SQLDatabaseName')]"
+              ],
+              "tags": {
+                "displayName": "AdventureWorks"
+              },
+              "properties": {
+                "storageKeyType": "[variables('AdventureWorksStorageKeyType')]",
+                "storageKey": "[variables('AdventureWorksStorageKey')]",
+                "storageUri": "[variables('AdventureWorksStorageUri')]",
+                "administratorLogin": "[parameters('azuresqldbserverAdminLogin')]",
+                "administratorLoginPassword": "[parameters('azuresqldbserverAdminLoginPassword')]",
+                "operationMode": "Import"
               }
-            ]
+            }
+          ]
         }
-    ],
-    "outputs": {
+      ]
     }
+  ],
+  "outputs": {
+  }
 }
 ```
 
@@ -241,25 +247,25 @@ On-Premises에서 사용 중인 SQL Server의 사용자 데이터베이스를 Az
  Azure resource template에 대해서 잘 아시고, bacpac을 import하는 부분에만 관심이 있으시다면, 상기의 azuredeploy.json 파일에서 SQL Database 리소스의 다음 부분을 참고하시기 바랍니다.
 
  ```JSON
-"resources": [
-{
-    "name": "Import",
-    "type": "extensions",
-    "apiVersion": "2014-04-01-preview",
-    "dependsOn": [
-    "[parameters('SQLDatabaseName')]"
-    ],
-    "tags": {
-    "displayName": "AdventureWorks"
-    },
-    "properties": {
-    "storageKeyType": "[variables('AdventureWorksStorageKeyType')]",
-    "storageKey": "[variables('AdventureWorksStorageKey')]",
-    "storageUri": "[variables('AdventureWorksStorageUri')]",
-    "administratorLogin": "[parameters('azuresqldbserverAdminLogin')]",
-    "administratorLoginPassword": "[parameters('azuresqldbserverAdminLoginPassword')]",
-    "operationMode": "Import"
-    }
-}
-]
+ "resources": [
+            {
+              "name": "Import",
+              "type": "extensions",
+              "apiVersion": "2014-04-01-preview",
+              "dependsOn": [
+                "[parameters('SQLDatabaseName')]"
+              ],
+              "tags": {
+                "displayName": "AdventureWorks"
+              },
+              "properties": {
+                "storageKeyType": "[variables('AdventureWorksStorageKeyType')]",
+                "storageKey": "[variables('AdventureWorksStorageKey')]",
+                "storageUri": "[variables('AdventureWorksStorageUri')]",
+                "administratorLogin": "[parameters('azuresqldbserverAdminLogin')]",
+                "administratorLoginPassword": "[parameters('azuresqldbserverAdminLoginPassword')]",
+                "operationMode": "Import"
+              }
+            }
+          ]
  ```
