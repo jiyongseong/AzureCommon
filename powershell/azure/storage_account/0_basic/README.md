@@ -1,4 +1,4 @@
-# Azure PowerShell - Storage Account > 만들기/수정하기/삭제하기
+# Azure PowerShell - Storage Account > 생성/수정/삭제
 
 ## 로그인 
 #### Azure Service Management(Classic)
