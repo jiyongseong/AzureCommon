@@ -201,9 +201,9 @@ Get-AzureStorageAccount cmdlet은 해당 Storage Account의 상세 정보를 반
 
 ![](https://jyseongfileshare.blob.core.windows.net/images/storage_account-01.png)
 
-참고 자료 : 
-    * [Set-AzureStorageAccount](https://msdn.microsoft.com/en-us/library/azure/dn495306.aspx)
-    * [Get-AzureStorageAccount](https://msdn.microsoft.com/en-us/library/azure/dn495134.aspx)
+참고 자료 :
+  * [Set-AzureStorageAccount](https://msdn.microsoft.com/en-us/library/azure/dn495306.aspx)
+  * [Get-AzureStorageAccount](https://msdn.microsoft.com/en-us/library/azure/dn495134.aspx)
 
 #### Azure Resource Manager(ARM)
 
@@ -231,9 +231,9 @@ Classic에서는 Account Type으로 Storage Account의 복제 옵션을 확인�
 
 ![](https://jyseongfileshare.blob.core.windows.net/images/storage_account-03.png)
 
-참고 자료 : 
-    * [Set-AzureRmStorageAccount](https://msdn.microsoft.com/en-us/library/mt607146.aspx)
-    * [Get-AzureRmStorageAccount](https://msdn.microsoft.com/en-us/library/mt607149.aspx)
+참고 자료 :
+  *   [Set-AzureRmStorageAccount](https://msdn.microsoft.com/en-us/library/mt607146.aspx)
+  *   [Get-AzureRmStorageAccount](https://msdn.microsoft.com/en-us/library/mt607149.aspx)
 
 ## Storage Account 삭제하기
 
