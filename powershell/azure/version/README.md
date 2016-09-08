@@ -6,6 +6,9 @@
 Import-Module -Name Azure*
 Get-Module -Name Azure* | Select Name, Version
 ```
+실행한 결과는 다음과 같이 보여지게 됩니다.
+
+![](https://jyseongfileshare.blob.core.windows.net/images/version-01.png)
 
 현재까지 배포된 최신의 Azure PowerShell 버전은 다음의 링크에서 확인이 가능합니다(안타깝게도 PowerShell을 이용하여 확인할 수 있는 cmdlet은 제공되지 않고 있습니다).
 
