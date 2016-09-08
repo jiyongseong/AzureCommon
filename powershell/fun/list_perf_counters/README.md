@@ -15,3 +15,6 @@ $counterSets = Get-Counter -ListSet *
  }
 ```
 
+결과는 다음과 같이 보여지게 됩니다.
+
+![](https://jyseongfileshare.blob.core.windows.net/images/list_perf_counters.png)
