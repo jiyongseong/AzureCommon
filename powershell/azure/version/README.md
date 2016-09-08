@@ -20,8 +20,13 @@ Azure PowerShell에서 제공되는 모듈의 목록과 각 모듈의 버전은 
 Get-Command -Module Azure* -CommandType Cmdlet| Sort-Object ModuleName| Select ModuleName, Version | Get-Unique -AsString
 ```
 
+![](https://jyseongfileshare.blob.core.windows.net/images/version-02.png)
+
+
 Azure PowerShell에서 제공되는 모든 cmdlet들은 다음의 스크립트로 확인이 가능합니다.
 
 ```powershell
 Get-Command -Module Azure* -CommandType Cmdlet | Select ModuleName, Name, Verb, Noun | Sort-Object ModuleName, Noun, Verb
 ```
+
+![](https://jyseongfileshare.blob.core.windows.net/images/version-03.png)
