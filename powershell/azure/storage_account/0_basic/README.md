@@ -1,5 +1,10 @@
 # Azure PowerShell - Storage Account > 생성/수정/삭제
 
+Azure Storage account가 무엇인지에 대해서는 아래의 링크들을 참고하시기 바랍니다.
+
+* [Introduction to Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/)
+* [About Azure storage accounts](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)
+
 ## 로그인 
 #### Azure Service Management(Classic)
 
