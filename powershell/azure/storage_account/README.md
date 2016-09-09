@@ -11,3 +11,4 @@
 * Tweak
 * Blob container 목록 가져오기
 * Blob container의 액세스 정책 변경하기
+* Blob container 삭제하기
