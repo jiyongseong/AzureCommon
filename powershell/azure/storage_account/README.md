@@ -15,4 +15,4 @@
 
 ### [Blob 이용하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/2_blob_uploading_blob)
 * Blob에 파일 올리기
-* 로컬에 있는 폴더 전체를 blob에 올리기
+* Tweak - 로컬에 있는 폴더 전체를 blob에 올리기
