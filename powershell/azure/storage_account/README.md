@@ -8,7 +8,11 @@
 
 ### [Blob 관리](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/1_blob)
 * Blob container 만들기 
-* Tweak
+* Tweak - CurrentStorageAccountName
 * Blob container 목록 가져오기
 * Blob container의 액세스 정책 변경하기
 * Blob container 삭제하기
+
+### [Blob 이용하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/2_blob_uploading_blob)
+* Blob에 파일 올리기
+* 로컬에 있는 폴더 전체를 blob에 올리기
