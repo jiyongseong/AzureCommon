@@ -13,6 +13,8 @@
 * Blob container의 액세스 정책 변경하기
 * Blob container 삭제하기
 
-### [Blob 이용하기]
+### Blob 이용하기
 * Blob에 파일 올리기
 * Tweak - 로컬에 있는 폴더 전체를 blob에 올리기
+* Blob 파일/목록 가져오기
+* Blob 삭제하기
