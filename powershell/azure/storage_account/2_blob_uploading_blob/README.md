@@ -58,4 +58,4 @@ ForEach ($item in $items)
 }
 ```
 
-blob으로 올리려는 경로를 $dir 변수에 할당하면 됩니다.
+blob으로 올리려는 로컬의 경로를 $dir 변수에 할당하여 사용하면 됩니다.
