@@ -40,10 +40,13 @@ Micorsoft Azure IaaS(Infrastructure as a Services)/PaaS(Platform as a Services) 
 
 #### [Azure Resource Group 간에 Resource 옮기기 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/powershell/moving-resources-between-azure-resource-groups)
 - Azure PowerShell을 이용하여, 특정 Resource Group에 있는 모든 리소스들을 다른 Resource Group으로 이동시키는 방법을 설명하고 있습니다.
+- 
 #### [Azure 운영 로그 내려 받기 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/powershell/azure-operation-log) 
 - Azure PowerShell을 이용하여 Azure의 운영로그를 csv 파일로 내려 받기
+
 #### [Azure 배포 로그 확인 받기 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/powershell/azure-deployment-log) 
 - Azure PowerShell을 이용하여 Azure의 배포 로그 확인 하기
+
 #### [Azure PowerShell 버전 확인하기 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/version) 
 - Azure PowerShell의 버전 및 모듈, cmdlet들 확인하기
 
