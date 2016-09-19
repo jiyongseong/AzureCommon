@@ -53,5 +53,6 @@ Micorsoft Azure IaaS(Infrastructure as a Services)/PaaS(Platform as a Services) 
 ## 이외의 것들
 
 #### [현재 머신의 모든 성능 카운터 목록 반환 (PowerShell)](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/fun/list_perf_counters)
+#### Public Ip 주소 확인 (PowerShell)
 
 **성지용([jiyongseong](https://github.com/jiyongseong))**
