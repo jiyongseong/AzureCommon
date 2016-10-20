@@ -2,7 +2,7 @@
 
 아래의 예제는 Storage account가 미리 생성되어 있어야 합니다.
 
-Azure Storage Account를 생성하는 방법에 대해서는 ["Azure PowerShell - Storage Account > 생성/수정/삭제"](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/0_basic)을 참고하시기 바랍니다.
+Azure Storage Account를 생성하는 방법에 대해서는 ["Azure PowerShell - Storage Account > 생성/수정/삭제"](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/storage_account_basic)을 참고하시기 바랍니다.
 
 Azure Storage account의 Blob 서비스에 대해서는 [Get started with Azure Blob](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-blobs/)를 참고하시기 바랍니다.
 
