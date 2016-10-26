@@ -6,7 +6,7 @@
 * [Storage Account 설정 변경하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/storage_account_basic#storage-account-설정-변경하기)
 * [Storage Account 삭제하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/storage_account_basic#storage-account-삭제하기)
 * [Storage Account key 가져오기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/storage_account_1#storage-account-key-가져오기)
-* Storage Account key 다시 생성하기
+* [Storage Account key 다시 생성하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/storage_account_1#storage-account-key-다시-생성하기)
 
 ### [Blob 관리](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob)
 * [Blob container 만들기 ](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob#blob-container-만들기)
