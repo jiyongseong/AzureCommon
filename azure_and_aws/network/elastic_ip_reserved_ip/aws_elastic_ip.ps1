@@ -1,5 +1,4 @@
-﻿#http://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html
-
+﻿
 Get-AWSCredentials -ListProfiles
 
 $profileName = "default"
