@@ -13,5 +13,3 @@ Get-EC2Address
 $allocationId = "eipalloc-########"
 
 Remove-EC2Address -AllocationId $allocationId -Force
-
-
