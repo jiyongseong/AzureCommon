@@ -30,7 +30,7 @@ Micorsoft Azure IaaS(Infrastructure as a Services)/PaaS(Platform as a Services) 
 * [Tweak - 로컬에 있는 폴더 전체를 blob에 올리기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob_uploading_blob#tweak---로컬에-있는-폴더-전체를-blob에-올리기)
 * [Blob 파일/목록 가져오기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob_get_blob#blob-파일목록-가져오기)
 * [Blob 삭제하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob_get_blob#blob-삭제하기)
-* Blob 다운로드 하기
+* [Blob 다운로드 하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob_get_blob#blob-다운로드-하기)
 
 #### Azure File Storage 이용하기
 * Azure File Share/Directory 생성하기
