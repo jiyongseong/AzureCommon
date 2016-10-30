@@ -22,7 +22,7 @@
 * [Blob 삭제하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob_get_blob#blob-삭제하기)
 * [Blob 다운로드 하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/blob_get_blob#blob-다운로드-하기)
 
-### Azure File Storage 이용하기
+### [Azure File Storage 이용하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/file)
 * Azure File Share/Directory 생성하기
 * Azure File Share/Directory에 파일 올리기
 * Tweak - 로컬에 있는 폴더 전체를 Azure file에 올리기
