@@ -10,6 +10,7 @@ Azure File Storage에 대해서는 다음의 자료를 참고하시기 바랍니
 Azure File storage는 다음의 그림과 같이, Storage account > share > directory > file 등의 구성 요소로 이루어집니다.
 
 ![](https://acom.azurecomcdn.net/80C57D/cdn/mediahandler/docarticles/dpsmedia-prod/azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-files/20160816064407/includes/storage-file-concepts-include/files-concepts.png)
+
 참고 자료 : [File storage concepts](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-files/#file-storage-concepts)
 
 Storage account는 이미 생성이 되었으므로, 다음에는 Share와 Directory를 생성해야 합니다.
