@@ -34,7 +34,7 @@ Micorsoft Azure IaaS(Infrastructure as a Services)/PaaS(Platform as a Services) 
 
 #### [Azure File Storage 이용하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/file)
 * [Azure File Share/Directory 생성하기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/file#azure-file-sharedirectory-생성하기)
-* Azure File Share/Directory에 파일 올리기
+* [Azure File Share/Directory에 파일 올리기](https://github.com/jiyongseong/AzureCommon/tree/master/powershell/azure/storage_account/file#azure-file-sharedirectory에-파일-올리기)
 * Tweak - 로컬에 있는 폴더 전체를 Azure file에 올리기
 * Azure File Share/Directory 삭제하기
 
