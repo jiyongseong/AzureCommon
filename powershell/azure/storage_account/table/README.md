@@ -2,11 +2,11 @@
 
 Azure Table Storage에 대해서는 다음의 자료를 참고하시기 바랍니다.
 
-* [Get started with Azure Table storage](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-tables/)
+* [Get started with Azure Table storage](https://docs.microsoft.com/en-us/azure/storage/storage-dotnet-how-to-use-tables)
 
 Azure Table Storage는 다음과 같은 구조로 되어 있습니다.
 
-![](https://acom.azurecomcdn.net/80C57D/cdn/mediahandler/docarticles/dpsmedia-prod/azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-tables/20160816064407/includes/storage-table-concepts-include/table1.png)
+![](https://docs.microsoft.com/en-us/azure/includes/media/storage-table-concepts-include/table1.png)
 
 Storage Account와 Table에 대한 관리 기능의 cmdlet들은 Azure PowerShell에서 제공되고 있으나, Entity를 관리하는 기능은  Microsoft.WindowsAzure.Storage.Table namespace의 클래스들을 이용하여야 합니다.
 
