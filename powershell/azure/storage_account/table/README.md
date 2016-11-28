@@ -18,4 +18,4 @@ Table을 관리하는 cmdlet은 크게 다음의 3가지 cmdlet들이 제공되�
 
 사용 방법 및 예제 코드는 다음의 Azure 문서에서 잘 다루고 있습니다.
 
-[How to manage Azure tables and table entities](https://azure.microsoft.com/en-us/documentation/articles/storage-powershell-guide-full/#how-to-manage-azure-tables-and-table-entities)
+[How to manage Azure tables and table entities](https://docs.microsoft.com/en-us/azure/storage/storage-powershell-guide-full#how-to-manage-azure-tables-and-table-entities)
