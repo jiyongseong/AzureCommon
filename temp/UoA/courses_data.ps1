@@ -3,7 +3,6 @@ $databaseName ="<<database name>>"
 $userName = "<<user name>>"
 $password = "<<password>>"
 
-
 function getData ($URI)
 {
 
@@ -70,27 +69,34 @@ function getData ($URI)
             $description = $description -replace "'", "''"
         }
 
-        $prerequisite = $innerHTML.body.getElementsByClassName('prerequisite') | Select InnerText
-        if ($prerequisite.innerText.Length -eq 0) 
+        $prerequisites = $innerHTML.body.getElementsByClassName('prerequisite') | Select InnerText
+        if ($prerequisites.innerText.Length -eq 0) 
         {
             $prerequisite = ''
+            $restrcition = ''
         }
         else
         {
-            if ($prerequisite.Count -gt 0)
+            if ($prerequisites.Count -gt 1)
             {
-                $prerequisite = $prerequisite[0].innerText.ToString() + ", " + $prerequisite[1].innerText.ToString()
+            $prerequisite.Count 
+
+                $prerequisite = $prerequisites[0].innerText.ToString() 
+                $prerequisite = $prerequisite -replace "'", "''"
+                $restrcition = $prerequisites[1].innerText.ToString()
+                $restrcition = $restrcition -replace "'", "''"
             }
             else
             {
-                $prerequisite = $prerequisite.innerText.ToString()
+                $prerequisite = $prerequisites.innerText.ToString()
                 $prerequisite = $prerequisite -replace "'", "''"
+                $restrcition = ''
             }
         }
                 
         $query 
 
-        $query = "INSERT INTO tb_temp_course(courseA, points, title, [description], prerequisite) VALUES('" + $courseA + "', '" + $points + "', '" + $title + "', '" + $description + "', '" + $prerequisite + "')"
+        $query = "INSERT INTO tb_temp_course(courseA, points, title, [description], prerequisite, Restriction) VALUES('" + $courseA + "', '" + $points + "', '" + $title + "', '" + $description + "', '" + $prerequisite + "', '" + $restrcition + "')"
 
         Invoke-Sqlcmd -ServerInstance $serverName -Database $databaseName -Username $userName -Password $password -Query $query | Format-Table
        
