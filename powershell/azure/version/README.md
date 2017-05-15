@@ -30,3 +30,11 @@ Get-Command -Module Azure* -CommandType Cmdlet | Select ModuleName, Name, Verb, 
 ```
 
 ![](https://jyseongfileshare.blob.core.windows.net/images/version-03.png)
+
+# Azure PowerShell 업데이트 (PowerShell)
+
+관리자 권한으로 아래의 cmdlet 실행
+
+```powershell
+Install-Module AzureRM -AllowClobber -Force
+```
