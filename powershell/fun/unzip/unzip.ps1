@@ -1,4 +1,7 @@
-﻿function Expand-ZIPFile($file, $destination)
+﻿## 다른 사람이 만든 것임
+## ref : https://www.howtogeek.com/tips/how-to-extract-zip-files-using-powershell/
+
+function Expand-ZIPFile($file, $destination)
 {
     $shell = new-object -com shell.application
     $zip = $shell.NameSpace($file)
