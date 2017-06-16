@@ -1,7 +1,7 @@
-﻿$serverName = "jyseong-test-eastasia.database.windows.net"
+﻿$serverName = "<<server>>.database.windows.net"
 $databaseName ="mydb"
 $userName = "labuser"
-$password = "Wjswk123"
+$password = "password"
 
 function getData_New ($course, $URI)
 {
