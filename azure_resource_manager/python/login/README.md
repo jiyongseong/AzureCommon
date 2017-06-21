@@ -31,7 +31,7 @@ def azureADUserLogin():
 ```
 다음과 같이, Python에서 실행을 하면
 
-```{r, engine='bash', count_lines}
+```bash
 >>> exec(open('./Documents/Python/azure/login/azureADUserLogin.py').read())
 >>> azureADUserLogin()
 ```

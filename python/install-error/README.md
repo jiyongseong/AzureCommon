@@ -12,6 +12,6 @@ pip install azure
 
 다음의 명령을 이용하여, 추가 모듈들을 설치
 
-```{r, engine='bash', count_lines}
+```bash
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 ```
