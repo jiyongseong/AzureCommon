@@ -17,7 +17,11 @@ Azure Python SDK를 이용하여 Azure으로 로그인하기 위해서는 다음
 여기서는 AD User/Password를 이용한 방법을 사용하게 됩니다.
 
 ## 로그인
-#include "/login/README.md"
+[Azure Python을 이용하여 Azure 인증 받기](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/python/login)
+
+## Azure 리소스 그룹 가져오기
+
+TBU
 
 ##참고 자료
 

@@ -23,6 +23,3 @@ foreach($schemaUri in $schemaUris)
     $fileName = -Join("C:\temp\", $schemaUri.ToString().Substring($schemaUri.LastIndexOf('/')+1))
     (Invoke-WebRequest -Uri $schemaUri).Content | Out-File -FilePath $fileName
 }
-
-
-
