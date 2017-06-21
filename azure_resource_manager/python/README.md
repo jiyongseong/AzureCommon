@@ -20,8 +20,7 @@ Azure Python SDK를 이용하여 Azure으로 로그인하기 위해서는 다음
 [Azure Python을 이용하여 Azure 인증 받기](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/python/login)
 
 ## Azure 리소스 그룹 가져오기
-
-TBU
+[Azure Python을 이용하여 Azure Resource Group 반환하기](https://github.com/jiyongseong/AzureCommon/tree/master/azure_resource_manager/python/resourceGroup)
 
 ##참고 자료
 

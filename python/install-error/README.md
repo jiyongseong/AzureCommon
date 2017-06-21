@@ -2,7 +2,7 @@
 
 Azure Python 모듈은 아래의 명령으로 설치 가능
 
-```{r, engine='bash', count_lines}
+```bash
 pip install azure
 ```
 
