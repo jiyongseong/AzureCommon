@@ -1,4 +1,5 @@
-﻿
+﻿#regenreated by myungkim
+
 function createOutputObject
 {
     $row = New-Object PSObject
